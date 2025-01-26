@@ -44,7 +44,6 @@ export default function page() {
             <label>studio</label>
             <input type="text" />
           </section>
-          {/* //una prueva */}
           <section>
             <label>referido por</label>
             <input type="text" />
