@@ -31,6 +31,7 @@ build_project:
   artifacts:
   paths:
     - .next/
+  expire_in: 1 day
 
 # deploy
 default:
