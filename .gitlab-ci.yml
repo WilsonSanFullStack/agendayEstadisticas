@@ -39,3 +39,5 @@ image: node:20
 script: 
 - npm install -g vercel
 - vercel --token $VERCEL_TOKEN --prod
+only:
+- main
