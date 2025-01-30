@@ -1,0 +1,41 @@
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+# instalar dependencias
+
+install_dependencias:
+  stage: install
+  image: node:20
+  script:
+    - npm install
+  cache:
+    paths:
+      - node_modules/
+
+# Ejecucion de pruebas
+run_tests:
+  stage: test
+  image: node:20
+  script:
+    - npm test
+
+# constuir el proyecto
+build_project:
+  stage: build
+  image: node:20
+  script:
+    - npm build
+  artifacts:
+  paths:
+    - .next/
+
+# deploy
+deploy_to_vercel:
+stage: deploy
+image: node:20
+script: 
+- npm install -g vercel
+- vercel --token $VERCEL_TOKEN --prod
