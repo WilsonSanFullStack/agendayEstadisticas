@@ -29,9 +29,9 @@ build_project:
   script:
     - npm build
   artifacts:
-  paths:
-    - .next/
-  expire_in: 1 day
+  # paths:
+  #   - .next/
+  # expire_in: 1 day
 
 # deploy
 default:
